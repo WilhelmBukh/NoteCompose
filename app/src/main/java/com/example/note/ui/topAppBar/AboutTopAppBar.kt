@@ -56,6 +56,7 @@ fun AboutTopAppBar(
                     //changeModeldb(Modeldb())
                     closeForeground(BackdropScaffoldState(BackdropValue.Revealed))
                     onClick()
+                    mainViewModel.card_size_state.value = true
                     //navigateToFullScreen()
                     //navController.navigate(Route.FullAboutScreen.route)
                     //modeldb = Modeldb()
@@ -109,6 +110,8 @@ fun AboutTopAppBar(
                             }
                             if (updateBackgroundBoolean) updateBackground()
                         }
+                        //navController.navigate(Route.MainScreen.route)
+                        onClick()
                     }) {
                         Icon(Icons.Filled.Check, null)
                     }

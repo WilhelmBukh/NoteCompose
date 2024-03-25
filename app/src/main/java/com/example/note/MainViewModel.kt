@@ -23,6 +23,7 @@ class MainViewModel() : ViewModel() {
     var saveFlow:StateFlow<List<Modeldb>?> = _saveFlow
     private var modeldbBuffer = mutableStateOf(Modeldb())
     private val coroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+    var card_size_state = mutableStateOf(true)
 
     fun initDatabase(context: Context) {
         globalDao = Database.getInstance(context).getDao()
